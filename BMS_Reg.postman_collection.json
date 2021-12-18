@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "b452c101-13e5-4bce-b019-f16a36ac1e9a",
+		"name": "BMS_Reg",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8082/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"ramesh\",\r\n    \"username\": \"ramesh1234\",\r\n    \"password\": \"Ramesh@123\",\r\n    \"guardianType\": \"father\",\r\n    \"guardianName\": \"Ramesh\",\r\n    \"address\": \"1-57,Main Road\",\r\n    \"citizenship\": \"Indian\",\r\n    \"state\": \"andhra\",\r\n    \"country\": \"India\",\r\n    \"emailAddress\": \"temp@gmail.com\",\r\n    \"gender\": \"male\",\r\n    \"maritalStatus\": \"unmarried\",\r\n    \"contactNumber\": \"9493430753\",\r\n    \"dob\": \"1998-01-02\",\r\n    \"identificationProofType\": \"PAN\",\r\n    \"identificationDocumentNo\": \"JCUPK3434A\",\r\n    \"referenceAccountHolderName\": \"ramesh\",\r\n    \"referenceAccountHolderAccountNo\": \"12345\",\r\n    \"referenceAccountHolderAddress\": \"same\",\r\n    \"accountType\": \"Savings\",\r\n    \"bankName\": \"Indian  Bank\",\r\n    \"branchName\": \"JRG main Branch\",\r\n    \"initialDepositAmount\": 5000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/editDetails/R-101",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYW1lc2gxMjM0IiwiZXhwIjoxNjI1MDU2NzI5LCJpYXQiOjE2MjUwNTMxMjl9.7FurKfgqsUELbjNttsX8LaGx7zU0tfx1JuU7eJ9z1gU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"ramesh\",\r\n    \"guardianType\": \"father\",\r\n    \"guardianName\": \"Ramesh\",\r\n    \"address\": \"1-57,Main Road\",\r\n    \"citizenship\": \"Indian\",\r\n    \"state\": \"andhra\",\r\n    \"country\": \"India\",\r\n    \"emailAddress\": \"temp@gmail.com\",\r\n    \"gender\": \"male\",\r\n    \"maritalStatus\": \"unmarried\",\r\n    \"contactNumber\": \"9493430753\",\r\n    \"dob\": \"2010-01-02\",\r\n    \"identificationProofType\": \"PAN\",\r\n    \"identificationDocumentNo\": \"JCUPK0000A\",\r\n    \"referenceAccountHolderName\": \"ramesh\",\r\n    \"referenceAccountHolderAccountNo\": \"12345\",\r\n    \"referenceAccountHolderAddress\": \"same\",\r\n    \"accountType\": \"Savings\",\r\n    \"bankName\": \"Indian  Bank\",\r\n    \"branchName\": \"JRG  Branch\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/editDetails/R-637",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"editDetails",
+						"R-637"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n \r\n  \"username\": \"ramesh\",\r\n   \"password\": \"rameswara\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8091/loan/R-374/applyLoan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYW1lc2gxMjM0IiwiZXhwIjoxNjI1MjEzNTQxLCJpYXQiOjE2MjUyMDk5NDF9.Lb3LDkNMtUZMFSBFXbpz1GJV0q3SMlebCCRjL4tVtHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {\r\n  \"amount\": 100000,\r\n  \"durationInYears\": 75,\r\n  \"type\" :\"home\",\r\n  \"loanDetails\": {\r\n    \"annualIncome\": 1000.0,\r\n    \"companyName\": \"cts\",\r\n    \"designation\": \"PAT\",\r\n    \"totalExp\":5,\r\n    \"expWithCurrentCompany\":5\r\n    \r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8091/loan/R-327/applyLoan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"loan",
+						"R-327",
+						"applyLoan"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
